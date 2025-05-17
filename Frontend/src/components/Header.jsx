@@ -13,12 +13,12 @@ function Header() {
   }
 
   return (
-    <header className='fixed top-0 w-[80vw] border-b bg-background/80 backdrop-blur-md z-50 supports-[backdrop-filter]:bg-background/60'>
+    <header className='fixed top-0 w-[90vw] border-b bg-background/80 backdrop-blur-md z-50 supports-[backdrop-filter]:bg-background/60'>
       <nav className='container mx-auto px-4 h-18 flex items-center justify-between'>
 
         <div className='flex items-start justify-start'>
           <a href='/'>
-            <img src='/logo.png' alt='Logo' className='h-10 w-auto' />
+            <img src='/public/logo.png' alt='Logo' className='h-10 w-auto' />
           </a>
         </div>
 
