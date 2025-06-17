@@ -128,10 +128,10 @@
   background:linear-gradient(
     to right,
     rgb(176, 205, 231) 1px,
-    transparent 1px
+    transparent -5px
   ),
-  linear-gradient(to bottom,rgb(161, 183, 205) 1px,transparent 1px);
-  background-size:50px 50px;
+  linear-gradient(to bottom,rgb(236, 204, 192) 1px,transparent -5px);
+  background-size:70px 70px;
   pointer-events:none;
   z-index: -1
 }
@@ -144,7 +144,7 @@
   height: 100%;
   background: radial-gradient(circle,transparent,rgba(0,0,0,1));
 }
-
+/* 
 @layer utilities{
   .gradient{
     @apply bg-gradient-to-b from-gray-400 via-gray-200 to-gray-600;
@@ -152,7 +152,7 @@
   .gradient-title{
     @apply gradient font-extrabold tracking-tighter text-transparent bg-clip-text pb-2 pr-2;
   }
-}
+} */
 
 .hero-image-wrapper{
   perspective:1000px;
@@ -167,3 +167,23 @@
 .hero-image.scrolled{
   transform:rotateX(0deg) scale(1) translateY(40px)
 }
+
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink-caret {
+  50% { border-color: transparent }
+  100% { border-color: black }
+}
+
+.typing-text {
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 3px solid black;
+  width: 0;
+  animation: typing 3s steps(30, end) forwards, blink-caret 0.75s step-end infinite;
+}
+

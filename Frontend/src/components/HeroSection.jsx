@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react'
 import { Button } from './ui/button'
+import TextEffect from './TextEffect';
 
 function HeroSection() {
     const imageRef = useRef(null);
@@ -20,45 +21,41 @@ function HeroSection() {
         window.addEventListener('scroll', handleScroll);
         return ()=>window.removeEventListener('scroll', handleScroll);
     }, []);
+    
   return (
-    <section className='w-full pt-36 md:pt-48 pb-10'>
-        <div className='space-y-6 text-center'>
-            <div className='space-y-6 mx-auto'>
-            <h1 className='gradient-title text-4xl md:text-5xl lg:text-6xl xl:text-7xl bg-gradient-to-b from-gray-400 via-gray-200 to-gray-600 font-extrabold tracking-tighter text-transparent bg-clip-text pb-2 pr-2'>
-                Your AI Career Coach For<br/>
-                Professional Success
-            </h1>
-            <p className='mx-auto max-w-[600px] text-muted-foreground md:text-xl'>
-                Advance your career with personalized guidance, interview prep, and AI-powered tools for job success.
-            </p>
-        </div>
-        <div>
-            <a href='/dashboard'>
-                <Button size='lg' className='px-8 mr-2'>
-                    Get Started
-                </Button>
-            </a>
-            <a href='/dashboard'>
-                <Button size='lg' className='px-8' variant='secondary'>
-                    Demo
-                </Button>
-            </a>
-        </div>
+    <section className='w-full pt-10 md:pt-28 pb-10 bg-gradient-to-b from-gray-400 via-gray-200 to-gray-600 rounded-xl' id='home'>
+  <div className='container mx-auto px-4'>
+    <div className='flex flex-col-reverse md:flex-row items-center justify-center gap-10 md:gap-20'>
+      
+      {/* Text Section */}
+      <div className='text-center md:text-left'>
+        <h1 className='text-3xl sm:text-4xl md:text-6xl font-bold tracking-tighter font-serif text-black mb-3'>
+          <TextEffect text="Hi, I'm Naveen" typingSpeed={100} pauseTime={1800} />
+        </h1>
+        <h3 className='text-md sm:text-lg md:text-xl font-semibold font-serif text-black leading-relaxed'>
+          a passionate learner and aspiring software developer.<br />
+          I build projects to explore web technologies and<br />
+          solve real-world problems.<br />
+          I'm ready to bring energy, curiosity, and fresh perspective to your team.
+        </h3>
+      </div>
 
-        <div className='hero-image-wrapper mt-5 md:mt-0'>
-            <div ref={imageRef} className='hero-image'>
-                <img 
-                    src='/banner.jpg'
-                    width={1280}
-                    height={720}
-                    alt='Sensai Image'
-                    className='w-fit rounded-lg shadow-2xl border mx-auto'
-                    priority
-                />
-            </div>
-            </div>
-        </div>
-    </section>
+      {/* Image Section */}
+      <div>
+        <img 
+          ref={imageRef}
+          src='/IMG_20241208_094753.jpg'
+          width={300}
+          height={300}
+          alt='Profile Image'
+          className='w-[
+          300px] sm:w-[250px] md:w-[300px] h-auto rounded-full shadow-2xl border object-cover mr-10 md:mr-0 transition-transform duration-300 ease-in-out transform hover:scale-105'
+        />
+      </div>
+    </div>
+  </div>
+</section>
+
   )
 }
 
