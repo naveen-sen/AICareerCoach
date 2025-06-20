@@ -1,13 +1,8 @@
-import HeroSection from '@/components/HeroSection'
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent } from '@/components/ui/card';
-import { faqs } from '@/data/faqs';
-import { features } from '@/data/features';
-import { howItWorks } from '@/data/HowItWorks';
-import { testimonial } from '@/data/testimonial';
-import { ArrowRight } from 'lucide-react';
 import React from 'react'
+import HeroSection from '@/components/HeroSection'
+import SkillsSection from '@/components/SkillsSection'
+import { Button } from '@/components/ui/button'
+import { Card, CardContent } from '@/components/ui/card'
 
 function HomePage() {
   return (
@@ -20,7 +15,7 @@ function HomePage() {
 
           <div className='grid md:grid-cols-2 gap-6'>
             {/* Project 1 */}
-            <Card className='border hover:border-primary transition-transform hover:scale-[1.02] duration-300'>
+            <Card className='border hover:border-primary transition-transform hover:scale-[1.05] duration-300 shadow-lg hover:shadow-xl'>
               <CardContent className='pt-6 text-center flex flex-col items-center'>
                 <img
                   src='/Screenshot 2025-06-17 110611.png'
@@ -105,12 +100,19 @@ function HomePage() {
         </div>
       </section>
 
+      <SkillsSection />
+
       <section className="w-full py-12 md:py-24 bg-background" id="contact">
         <div className="container mx-auto px-4 md:px-6 max-w-3xl text-center">
           <h2 className="text-3xl font-bold tracking-tighter mb-6">Get in Touch</h2>
           <p className="text-muted-foreground mb-8 text-lg">
             I’m always open to discussing new opportunities, collaborations, or freelance work. Feel free to drop me a message!
           </p>
+
+          <div className="mb-6 text-lg text-muted-foreground">
+            <p>Contact Number: <a href="tel:+1234567890" className="underline hover:text-primary">+91 7803991924</a></p>
+            <p>Email: <a href="mailto:naveennapit@gmail.com" className="underline hover:text-primary">naveennapit@gmail.com</a></p>
+          </div>
 
           <div className="flex justify-center gap-6 mt-6 text-muted-foreground">
             <a href="https://mail.google.com/mail/?view=cm&fs=1&to=naveennapit@gmail.com" target="_blank" rel="noopener noreferrer">
@@ -135,4 +137,4 @@ function HomePage() {
   )
 }
 
-export default HomePage;
+export default HomePage

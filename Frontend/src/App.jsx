@@ -5,7 +5,6 @@ import './App.css'
 import { Button } from '@/components/ui/button'
 import Header from '@/components/Header'
 import { Route, Routes } from 'react-router-dom'
-import SignInPage from './Pages/sign-in'
 import HomePage from './Pages/HomePage'
 import { ThemeProvider } from './components/theme-provider'
 
@@ -17,7 +16,6 @@ function App() {
     <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
       <Header/>
       <Routes>
-        <Route path='/signin' element={<SignInPage />} />
         <Route path='/' element={<HomePage />} />
       </Routes>
     </ThemeProvider>
