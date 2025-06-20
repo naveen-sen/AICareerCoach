@@ -24,9 +24,9 @@ function SkillsSection() {
         </div>
         <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-8 justify-center items-center">
           {skills.map((skill) => (
-            <div key={skill.name} className="flex flex-col items-center bg-background shadow-lg rounded-2xl p-6 hover:scale-105 transform transition-transform duration-300">
-              <img src={skill.imgSrc} alt={skill.name} className="w-20 h-20 mb-4 object-contain" />
-              <h3 className="text-lg font-semibold text-center">{skill.name}</h3>
+            <div key={skill.name} className="flex flex-col items-center bg-background shadow-lg rounded-2xl p-3 sm:p-4 md:p-6 hover:scale-105 transform transition-transform duration-300">
+              <img src={skill.imgSrc} alt={skill.name} className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 mb-2 sm:mb-3 md:mb-4 object-contain" />
+              <h3 className="text-base sm:text-lg md:text-xl font-semibold text-center">{skill.name}</h3>
             </div>
           ))}
         </div>
