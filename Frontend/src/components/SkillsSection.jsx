@@ -26,7 +26,7 @@ function SkillsSection() {
           {skills.map((skill) => (
             <div key={skill.name} className="flex flex-col items-center bg-background shadow-lg rounded-2xl p-3 sm:p-4 md:p-6 hover:scale-105 transform transition-transform duration-300">
               <img src={skill.imgSrc} alt={skill.name} className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 mb-2 sm:mb-3 md:mb-4 object-contain" />
-              <h3 className="text-base sm:text-lg md:text-xl font-semibold text-center">{skill.name}</h3>
+              <h3 className="text-xs sm:text-lg md:text-xl font-semibold text-center">{skill.name}</h3>
             </div>
           ))}
         </div>
